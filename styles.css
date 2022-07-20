@@ -75,11 +75,9 @@ body {
   letter-spacing: 6px;
   color: #233c2b;
 }
-.glass1 {
-  z-index: 2;
-}
-.glass2 {
-  z-index: 2;
+.card:hover .glass {
+  transition: 1s;
+  visibility: hidden;
 }
 .wine-glass {
   position: absolute;

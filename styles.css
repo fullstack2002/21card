@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #7881f3;
+}
+.card {
+  width: 640px;
+  height: 400px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+  transition: 10s;
+}
+.card:hover {
+  transform: rotate(-2.5deg);
+}
+.card:hover .outside {
+  transform: rotateY(-130deg);
+}
+.outside, 
+.inside {
+  border: 1px solid #06474d;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+}
+.inside {
+  background: linear-gradient(to right, #a8e0b1, #c3e5ff 35%);
+  left: 50%;
+  line-height: 3;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.outside {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 1;
+  transform-origin: left;
+  transition: 2.5s;
+}
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+}
+.front {
+  background-color: #c3e5ff;
+}
+.back {
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, #a8e0b1, #c7e5fd 90%);
+}
+.outside p {
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: 6px;
+  color: #233c2b;
+}
+.wine-glass {
+  position: absolute;
+  background-image: url('../images/wine.png');
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  border-radius: 0 0 50% 50%;
+  animation: fill 3s infinite;
+  background-repeat: repeat-x;
+  top: 45%;
+  left: 32.5%;
+}
+.glass-stem {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background: #000000;
+  top: 57%;
+  left: 40%;
+}
+.glass-base {
+  position: absolute;
+  width: 35px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000000;
+  top: 69%;
+  left: 35.5%;
+}
+.wine-glass2 {
+  position: absolute;
+  background-image: url('../images/wine.png');
+  width: 50px;
+  height: 50px;
+  border: 3px solid #000000;
+  border-radius: 0 0 50% 50%;
+  animation: fill 3s infinite;
+  background-repeat: repeat-x;
+  top: 45%;
+  left: 52.5%;
+}
+.glass-stem2 {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background: #000000;
+  top: 57%;
+  left: 60%;
+}
+.glass-base2 {
+  position: absolute;
+  width: 35px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000000;
+  top: 69%;
+  left: 55.5%;
+}
+@keyframes fill {
+  0% {
+    background-position: 0px 50px;
+  }
+
+  20% {
+    background-position: -5px 45px;
+  }
+
+  40% {
+    background-position: -50px 30px;
+  }
+
+  80% {
+    background-position: -100px 3px;
+  }
+
+  100% {
+    background-position: 0px 50px;
+  }
+}
+.inside p {
+  font-size: 20px;
+  line-height: 35px;
+  color: #182b1e;
+}
+.inside h1 {
+  font-size: 75px;
+  line-height: 50px;
+  margin-bottom: 100px;
+}
+.card-title {
+  margin-top: 30px;
+}

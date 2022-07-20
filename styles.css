@@ -19,6 +19,7 @@ body {
   -webkit-perspective: 1200px;
   perspective: 1200px;
   transition: 10s;
+  z-index: 1;
 }
 .card:hover {
   transform: rotate(-2.5deg);
@@ -73,6 +74,12 @@ body {
   text-align: center;
   letter-spacing: 6px;
   color: #233c2b;
+}
+.glass1 {
+  z-index: 2;
+}
+.glass2 {
+  z-index: 2;
 }
 .wine-glass {
   position: absolute;
